@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator,  } from '@react-navigation/native-stack';
 
 import { List } from '../screens/List';
 import { TextDemo, ButtonDemo, FormDemo } from '../screens/Demos';
@@ -11,7 +11,7 @@ export type MainStackParams = {
   ButtonDemo: undefined;
 };
 
-const MainStack = createStackNavigator<MainStackParams>();
+const MainStack = createNativeStackNavigator<MainStackParams>();
 
 export const Main = () => (
   <MainStack.Navigator>

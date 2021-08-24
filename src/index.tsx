@@ -16,8 +16,9 @@ import {
   WorkSans_700Bold,
 } from '@expo-google-fonts/work-sans';
 
+import { AuthProvider } from './contexts/AuthContext';
 import Routes from './routes';
-import { Main } from './navigation/Main';
+// import { Main } from './navigation/Main';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -33,13 +34,13 @@ export default function App() {
   }
 
   return (
-    <>
+    <AuthProvider>
       <StatusBar style="auto" />
       <NavigationContainer>
         {/* <Main /> */}
         <Routes />
         <Toast ref={ref => Toast.setRef(ref)} />
       </NavigationContainer>
-    </>
+    </AuthProvider>
   );
 }
