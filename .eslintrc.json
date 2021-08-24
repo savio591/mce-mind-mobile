@@ -1,0 +1,20 @@
+{
+  "root": true,
+  "extends": [
+    "handlebarlabs",
+    "plugin:prettier/recommended",
+    "prettier/react"
+  ],
+  "rules": {
+    "no-use-before-define": 0,
+    "react/style-prop-object": 0,
+    "react/require-default-props": 0,
+    "import/extensions": 0,
+    "no-unused-vars": "warn",
+    "camelcase": "off"
+  },
+  "globals": {
+    "__DEV__": "readonly"
+  },
+  "plugins": []
+}
