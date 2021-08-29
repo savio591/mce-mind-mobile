@@ -1,10 +1,11 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Header } from '../../components/Header';
+import { Container } from './styles';
 
 export function Dashboard() {
   return (
-    <View>
-      <Text>Hello World!</Text>
-    </View>
+    <Container>
+      <Header />
+    </Container>
   );
 }

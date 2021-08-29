@@ -11,7 +11,6 @@ import { Input } from '../../components/Input';
 import { colors } from '../../styles/colors';
 import { Container, Image, ParagraphText } from './styles';
 
-import { AuthContext } from '../../contexts/AuthContext';
 import { useAuth } from '../../hooks/useAuth';
 
 type ValidationErrors = {
@@ -51,7 +50,6 @@ export default function Login() {
         text2: 'Autenticado com sucesso!',
       });
 
-      navigation.goBack();
     } catch (err) {
       if (err instanceof Yup.ValidationError) {
         err.inner.forEach(error => {

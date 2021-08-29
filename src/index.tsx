@@ -3,6 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import AppLoading from 'expo-app-loading';
 import Toast from 'react-native-toast-message';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import {
   useFonts,
@@ -34,13 +35,15 @@ export default function App() {
   }
 
   return (
-    <AuthProvider>
-      <StatusBar style="auto" />
-      <NavigationContainer>
-        {/* <Main /> */}
-        <Routes />
-        <Toast ref={ref => Toast.setRef(ref)} />
-      </NavigationContainer>
-    </AuthProvider>
+    <SafeAreaProvider>
+      <AuthProvider>
+        <StatusBar style="auto" />
+        <NavigationContainer>
+          {/* <Main /> */}
+          <Routes />
+          <Toast ref={ref => Toast.setRef(ref)} />
+        </NavigationContainer>
+      </AuthProvider>
+    </SafeAreaProvider>
   );
 }
